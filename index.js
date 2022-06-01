@@ -31,6 +31,9 @@ app.get('/register', (req,res) =>{
 app.get('/success', (req,res) =>{
     res.sendFile(path.join(__dirname, '/app', '/success.html'));
 });
+app.get('/error', (req,res) =>{
+    res.sendFile(path.join(__dirname, '/app', '/error.html'));
+});
 app.get('/register-success', (req,res) =>{
     res.sendFile(path.join(__dirname, '/app', '/register-success.html'));
 });

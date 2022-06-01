@@ -62,15 +62,21 @@ const login = (req,res,next) => {
                    console.log('Login Successful for ' + username)
                    res.redirect('/success')
                 } else {
+                    /*
                     res.json({
                         message: 'Password Incorrect!'
                     })
+                    */
+                    res.redirect('/error')
                 }
             })
         }else{
+            /*
             res.json({
                 message: 'Username is invalid. Please try again!'
             })
+            */
+            res.redirect('/error')
         }
     })
     .catch(err => {
