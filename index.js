@@ -20,6 +20,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'app')));
 app.get('/', (req,res) =>{
+    res.redirect('/login');
+});
+app.get('/login', (req,res) =>{
     res.sendFile(path.join(__dirname, '/app', '/login.html'));
 });
 app.get('/register', (req,res) =>{
